@@ -1,0 +1,29 @@
+body{
+    min-height: 100vh;
+    line-height: 20px;
+    font-family: sans-serif;
+}
+
+
+
+
+.listpage{
+    padding: 10px;
+    text-align: center;
+    list-style: none;
+}
+
+.listpage li{
+    background-color: white;
+    padding: 20px;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+
+.listpage .active{
+    background-color: aqua;
+    color: black;
+    
+}

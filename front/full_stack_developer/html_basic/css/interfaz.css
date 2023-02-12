@@ -1,0 +1,41 @@
+#descripcion{
+     resize: none;
+}
+._label{
+    color: white;
+}
+
+body{
+    background: red;
+}
+nav{
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.2); 
+
+}
+
+.bg_color{
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.2);  
+}
+
+h2{
+    color: white;
+}
+label{
+    color: white;
+}
+
+body{
+    background: #DC2424;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4A569D, #DC2424);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4A569D, #DC2424); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*efox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
+}
+.centrado_css{
+    text-align: center;
+    vertical-align: middle;
+}

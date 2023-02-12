@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
+
+    <!-- Bootrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Lote</title>
+
+    <!-- ICON TITLE -->
+    <link rel="shortcut icon" href="img/logo.jpg">
+
+    <!-- CSS PROVICIONAL -->
+    <style>
+
+        
+/* Reset HTML */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Reset HTML */
+
+
+/* Backs ground transparente para los inputs */
+.bg-transparent{
+    background-color: transparent;
+    border-radius: 10px;
+    border-end-end-radius:10px ;
+    border-bottom-left-radius:10px ;
+}
+
+/* Pezonalizacion HTML */
+html{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Perzonalizacion body */
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(247, 247, 247);
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;}
+
+/* Background difuminado para los conteiners */
+.difuminado{
+    backdrop-filter: blur(25px);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Cambios al boton buscar lote */
+.change{
+    margin-top: 24px;
+    height: 40px;
+}
+
+/* cambiando el margin top de h6 */
+.margin-top-h6{
+    margin-top: -8px;
+}
+
+/* Cambio cerrar sesion */
+.cerrar-sesion-top{
+    margin-top: 10px;
+    
+}
+
+/* Orzanizando las cajas centros de lote */
+.caja{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Eliminacion de la imagen del nav cuando baje de un ancho de 768px */
+@media screen and (max-width: 768px){
+    .none_photo{
+        display:none;
+    }
+}
+
+
+/* Tamaño de letra de los centros */
+.font-size-small{
+    font-size: 1em;
+    font-weight: normal;
+}
+
+/* Navbar evita desordamiento */
+.nav_{
+    width: 100%;
+}
+
+/* backgroud azul bandera dominicana */
+.backgroud_azul_inabie{
+    background-color: #003970;
+    color: white;
+}
+
+/* Estilos de los li 
+li a{
+    text-decoration: none;
+    color: black;
+}
+*/
+
+/* Transformacion a los li  */
+li{
+    max-width: 30%;
+    transform: scale(1);
+    transition: transform .2s linear;
+    cursor: pointer;
+}
+
+li:hover{
+    transform: scale(1.2);
+    transition: transform .2s ease;
+    z-index: 1000;
+}
+
+
+
+/* font color */
+.font-color{
+    color: #003970;
+}
+
+/* button color */
+.btn-color-blue{
+    background-color: #003970;
+    color: white;
+}
+.btn-color-blue:hover{
+    background-color: #00213f;
+    color: white;
+}
+
+/* Agregar cantidad de raciones agregamos una altura maxima */
+.altura{
+    height: 50%;
+}
+    </style>
+
+</head>
+<body>
+<!-- Navbar -->
+<div class="row alig-items-center nav_">
+    <!-- Logo -->
+    <div class="col-sm-12 col-md-3 justify-content-end none_photo">
+        <a class="navbar-brand "><img class="img-fluid mx-5" style="width: 400px;" src="img/Logo-inabie.png" alt="INABIE"></a>
+    </div>
+
+    <!-- Titulo -->
+    <div class="col-sm-12 col-md-6 text-center px-5">
+        <h2 class="pt-3 mt-3 fs-2 fw-bold" >Tema de Lorem ipsum dolor sit amet.</h2>
+    </div>
+
+    <!-- Nombre usuario -->
+    <div class="col-sm-12 col-md-1 mx-auto margin-top-h6">
+            <h6 class="ms-auto  text-center mt-3 px-2 d-flex flex-row justify-content-center alig-items-center pt-4 " ">Bienvenido/a {{name}} </h6>
+    </div>
+
+    <!-- Cerrar sesion -->
+    <div class="col-md-1 mx-auto cerrar-sesion-top">
+            <a class="nav-link change2 text-center mx-auto mt-4 d-flex justify-content-center  " href="http://10.100.0.58:8080/geoapp/logout">Cerrar Sesión</a>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- BETA -->
+<div class="container-fluid">
+    <div class="row d-flex flex-sm-wrap flex-nowrap mx-auto">
+
+        <div class="col col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 shadow my-5 ms-auto rounded difuminado">
+            <div class="text-center py-5" >
+                <h4 class="fw-bold fs-3 font-color">Lorem ipsum dolor sit, amet consectetur</h4>
+            </div>
+        </div>
+
+        <div class="col col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 shadow me-auto mt-4 ms-auto rounded difuminado">
+            <!-- Tema -->
+            <div class="text-center py-2">
+                <h2 class="fw-bold fs-4 font-color" >Buscar lote</h2>
+            </div>
+            <form action="" class="row justify-content-center py-3">
+                <div class="form-group col-md-3" style="width: 40%;">
+                    <label for="numero-proceso" class="fw-bold form-label">Nombre proceso</label>
+                    <input  type="search" list="nombre-proceso" class="form-control bg-transparent mb-2" placeholder="Nombre proceso" autofocus>
+                    <datalist id="nombre-proceso">
+                        <option>Proceso 1</option>
+                        <option>Proceso 2</option>
+                        <option>Proceso 3</option>
+                        <option>Proceso 4</option>
+                        <option>Proceso 5</option>
+                        <option>Proceso 6</option>
+                        <option>Proceso 7</option>
+                    </datalist>
+                </div>
+
+                <!-- Numerolote -->
+                <div class="form-group col-md-3" style="width: 40%;">
+                    <label for="numero-proceso" class="fw-bold form-label">Numero de lote</label>
+                    <input  type="number" list="numero-lote" class="form-control bg-transparent mb-2" placeholder="Numero de lote" autofocus>
+                    <datalist id="numero-lote">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                    </datalist>
+                </div>
+                <!-- Button -->
+                <button class="col-md-2 btn shadow  fw-bold change btn-color-blue mb-1 mt-1" style="width: 60%; margin-top: 0;">Buscar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid" >
+    <div class="row d-flex flex-sm-wrap flex-nowrap mx-auto">
+        
+        <!-- Centros del lote -->
+        <!-- Titulo -->
+        <div class="col col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 shadow pb-4 my-4 ms-auto rounded difuminado" style="height: 100%;">
+            <div class="text-center py-3">
+                <h4 class="fw-bold fs-4 font-color">Datos del lote</h4>
+            </div>
+
+            <!-- Lista de centros que pertenecen a ese lote -->
+            <ul class="caja list-group list-group-horizontal justify-content-center">
+
+                    <!-- Centro educativo -->
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="fw-bold mb-1 me-auto">
+                            <p> 05024 </p>
+                            <div class="mb-1 me-auto mt-2 font-size-small">
+                                <p id=""> Centro de excelencia Melba baez de erazo Lorem,</p>
+                            </div>
+                        </div>
+                        <span class="badge rounded-pill backgroud_azul_inabie">3</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="fw-bold mb-1 me-auto">
+                            <p> 05024 </p>
+                            <div class="mb-1 me-auto mt-2 font-size-small">
+                                <p id=""> Centro de excelencia Melba baez de erazo Lorem,</p>
+                            </div>
+                        </div>
+                        <span class="badge rounded-pill backgroud_azul_inabie">3</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="fw-bold mb-1 me-auto">
+                            <p> 05024 </p>
+                            <div class="mb-1 me-auto mt-2 font-size-small">
+                                <p id=""> Centro de excelencia Melba baez de erazo Lorem,</p>
+                            </div>
+                        </div>
+                        <span class="badge rounded-pill backgroud_azul_inabie">3</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="fw-bold mb-1 me-auto">
+                            <p> 05024 </p>
+                            <div class="mb-1 me-auto mt-2 font-size-small">
+                                <p id=""> Centro de excelencia Melba baez de erazo Lorem,</p>
+                            </div>
+                        </div>
+                        <span class="badge rounded-pill backgroud_azul_inabie">3</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="fw-bold mb-1 me-auto">
+                            <p> 05024 </p>
+                            <div class="mb-1 me-auto mt-2 font-size-small">
+                                <p id=""> Centro de excelencia Melba baez de erazo Lorem,</p>
+                            </div>
+                        </div>
+                        <span class="badge rounded-pill backgroud_azul_inabie">3</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="fw-bold mb-1 me-auto">
+                            <p> 05024 </p>
+                            <div class="mb-1 me-auto mt-2 font-size-small">
+                                <p id=""> Centro de excelencia Melba baez de erazo Lorem,</p>
+                            </div>
+                        </div>
+                        <span class="badge rounded-pill backgroud_azul_inabie">3</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="fw-bold mb-1 me-auto">
+                            <p> 05024 </p>
+                            <div class="mb-1 me-auto mt-2 font-size-small">
+                                <p id=""> Centro de excelencia Melba baez de erazo Lorem,</p>
+                            </div>
+                        </div>
+                        <span class="badge rounded-pill backgroud_azul_inabie">3</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="fw-bold mb-1 me-auto">
+                            <p> 05024 </p>
+                            <div class="mb-1 me-auto mt-2 font-size-small">
+                                <p id=""> Centro de excelencia Melba baez de erazo Lorem,</p>
+                            </div>
+                        </div>
+                        <span class="badge rounded-pill backgroud_azul_inabie">3</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="fw-bold mb-1 me-auto">
+                            <p> 05024 </p>
+                            <div class="mb-1 me-auto mt-2 font-size-small">
+                                <p id=""> Centro de excelencia Melba baez de erazo Lorem,</p>
+                            </div>
+                        </div>
+                        <span class="badge rounded-pill backgroud_azul_inabie">3</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="fw-bold mb-1 me-auto">
+                            <p> 05024 </p>
+                            <div class="mb-1 me-auto mt-2 font-size-small">
+                                <p id=""> Centro de excelencia Melba baez de erazo Lorem,</p>
+                            </div>
+                        </div>
+                        <span class="badge rounded-pill backgroud_azul_inabie">3</span>
+                    </li>
+
+            </ul>
+        </div>
+
+        <!-- Datos del lote -->
+        <div class="col col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 ms-auto shadow pb-5 my-4 rounded difuminado me-auto mx-5 altura">
+            <div class="text-center py-3">
+                <h4 class="fw-bold fs-4 font-color">Datos del lote</h4>
+            </div>
+                <!-- Formulario -->
+                <form action="" class="row justify-content-start ps-4 mt-4">
+
+                    <!-- Campo raciones -->
+                    <div class="form-group  col-md-5 ">
+                        <label for="Raciones" class="fw-bold form-label text-center">Codigo</label>
+                        <input  type="text" class="form-control bg-transparent mb-2" name="codigo" id="codigo" placeholder="codigo" disabled>
+                    </div>
+
+                    <!-- Campo 2 -->
+                    <div class="form-group col-md-5">
+                        <label for="" class="fw-bold form-label">Centro educativo</label>
+                        <input  type="text" class="form-control bg-transparent mb-2" name="centro-educativo" id="centro-educativo" placeholder="centro educativo" disabled>
+                    </div>
+
+                    <!-- Campo 2 -->
+                    <div class="form-group col-md-5">
+                        <label for="" class="fw-bold form-label">Cantidad de raciones</label>
+                        <input  type="text" class="form-control bg-transparent mb-2" name="cantidad-raciones" id="cantidad-raciones7" placeholder="Cantidad de raciones" autofocus>
+                    </div>
+                    <!-- Campo 5 -->
+                    <div class="d-grid mt-2 px-5 ps-4">
+                        <button class="btn fw-bold btn-color-blue">Guardar</button>
+                    </div>
+                </form>
+        </div>
+        </div>
+    </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

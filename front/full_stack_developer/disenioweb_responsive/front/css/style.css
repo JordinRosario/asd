@@ -1,0 +1,125 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.bg-transparent{
+    background-color: transparent;
+    border-radius: 10px;
+    border-end-end-radius:10px ;
+    border-bottom-left-radius:10px ;
+}
+.border_{
+    border-radius: 10px;
+}
+._bg{
+    background-color: rgb(241, 241, 241);
+}
+
+html{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(247, 247, 247);
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.difuminado{
+    backdrop-filter: blur(25px);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mover{
+    margin: 20px 0px;
+}
+
+.change{
+    margin-top: 24px;
+    height: 40px;
+}
+
+.margin-top-h6{
+    margin-top: -8px;
+}
+
+.cerrar-sesion-top{
+    margin-top: 10px;
+    
+}
+.font-size{
+    font-size: 15px;
+}
+.margin_0{
+    margin: 0px;
+}
+
+#centros-lote{
+    width: 100%;
+    padding: 2rem;
+
+}
+
+#centros-lote .centro-educativo{
+    width:150px;
+      height:100px;
+      min-width:150px;
+      min-height:100px;
+      max-width:200px;
+      max-height:100px;
+      overflow:hidden;
+      display:block;
+      border:1px solid red;
+}
+

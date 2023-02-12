@@ -1,0 +1,10 @@
+.img_{
+    width: 400px;
+}
+
+.rezize{
+    resize: none;
+}
+.radius{
+    border-radius: 10px;
+}

@@ -1,0 +1,22 @@
+form{
+    resize: none;
+}
+
+#descripcion{
+    resize: none;
+}
+.card:hover{
+    opacity:0.7 ;
+}
+
+.card-text{
+    text-align: justify;
+}
+
+body{
+    background: rgb(108, 106, 106);
+}
+._bg-light{
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.2);  
+}
